@@ -190,6 +190,7 @@ ul {
 }
 
 .main-section {
+  scroll-snap-align: center;
   justify-content: center;
   align-items: center;
   position: relative;
