@@ -182,7 +182,7 @@
 
               <div>
                 <h3><i class="fas fa-user-graduate"></i> internship</h3>
-                <p>refactoring CiTUR.</p>
+                <p>redesigning & refactoring CiTUR.</p>
 
                 <button><i class="fas fa-file-code"></i> case study</button>
               </div>
@@ -476,10 +476,35 @@
 
 <footer>
 
-  <div id="contact" class="contact">
-    <h1>contact</h1>
-    <a href="mailto:rebub@vivaldi.net"><button><i class="fas fa-paper-plane"></i> Email</button></a>
+  <div class="contact">
+    <div id="contact">
+      <h1>contact</h1>
+      <a href="mailto:rebub@vivaldi.net"><button><i class="fas fa-paper-plane"></i> Email</button></a>
+    </div>
+
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label>Name:<br>
+          <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <label>Email:<br>
+          <input type="email" name="email" />
+        </label>
+      </p>
+      <p>
+        <label>Message:<br>
+          <textarea name="message"></textarea>
+        </label>
+      </p>
+      <p>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+      </p>
+    </form>
   </div>
+
+
 
   <div class="social-media">
 

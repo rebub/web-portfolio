@@ -496,8 +496,12 @@ header h1 span:hover {
 
 /** FOOTER **/
 .contact {
-  text-align: center;
+  display: grid;
   padding: 10em 2em;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
 }
 
 .contact h1 {
@@ -507,6 +511,32 @@ header h1 span:hover {
 
 .contact h2 {
   margin-bottom: 1rem;
+}
+
+.contact form {
+  text-align: left;
+}
+
+form p {
+  margin: 1em 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  color: var(--text);
+  background-color: var(--overlay);
+  border: none;
+  border-radius: 5px;
+  min-height: 25px;
+  width: 100%;
+}
+
+textarea {
+  max-width: 40vw;
+  min-width: 20vw;
+  min-height: 75px;
+  max-height: 125px;
 }
 
 button {
@@ -771,6 +801,10 @@ input[type='checkbox']:hover:not(:checked):not(:disabled) {
 
   /** FOOTER **/
 
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
   .social-media {
     display: grid;
     padding: 2em;
@@ -780,6 +814,13 @@ input[type='checkbox']:hover:not(:checked):not(:disabled) {
 
   .social-media p {
     margin-bottom: 2em;
+  }
+
+
+  /* * Contact Form * */
+
+  form {
+    display: none;
   }
 
 }
@@ -920,4 +961,10 @@ input[type='checkbox']:hover:not(:checked):not(:disabled) {
 .footer-btn {
   width: 20%;
   margin: 5px auto;
+}
+
+@media only screen and (max-height:800px) {
+  #theme-button {
+    top: 90%;
+  }
 }
