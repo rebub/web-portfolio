@@ -420,7 +420,7 @@ header h1 span:hover {
   padding: 1em 0;
   text-align: left;
   transition: all .3s ease;
-  font-size: clamp(1.8em, 6vw, 2em);
+  font-size: clamp(1.5em, 6vw, 2em);
 }
 
 .projects-desktop,
@@ -778,7 +778,12 @@ input[type='checkbox']:hover:not(:checked):not(:disabled) {
 
   .projects-section .glider-track a>div,
   .skillsets-section .glider-track a>div {
-    padding: .25em 0;
+    padding: .5em 0;
+  }
+
+  .projects-section .glider-track h2,
+  .skillsets-section .glider-track h2 {
+    font-size: clamp(.75em, 6vw, 1.5em);
   }
 
   .projects-section h3,
@@ -846,6 +851,11 @@ input[type='checkbox']:hover:not(:checked):not(:disabled) {
 }
 
 @media only screen and (max-width:325px) {
+
+  button {
+    margin: 5px 0;
+  }
+
   .social-icons {
     display: grid;
     grid-template-columns: 1fr 1fr;
