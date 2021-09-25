@@ -524,12 +524,14 @@ form p {
 input[type="text"],
 input[type="email"],
 textarea {
-  color: var(--text);
-  background-color: var(--overlay);
-  border: none;
-  border-radius: 5px;
-  min-height: 25px;
   width: 100%;
+  border: none;
+  padding: .5em;
+  min-height: 25px;
+  color: var(--text);
+  border-radius: 5px;
+  background-color: var(--overlay);
+  transition: all .3s ease;
 }
 
 textarea {
