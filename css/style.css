@@ -210,13 +210,15 @@ i.fas.fa-info,
 i.fas.fa-ruler,
 i.fas.fa-check,
 i.fas.fa-cloud,
+i.fas.fa-wrench,
 i.fas.fa-running,
 i.fas.fa-fill-drip,
 i.fas.fa-arrow-right,
 i.fas.fa-street-view,
 i.fas.fa-address-card,
 i.fas.fa-user-graduate,
-i.fas.fa-user-astronaut {
+i.fas.fa-user-astronaut,
+i.fas.fa-check {
   color: var(--accent-color);
 }
 
@@ -481,10 +483,6 @@ header h1 span:hover {
   grid-template-columns: 1fr 1fr;
 }
 
-.main-frame p {
-  margin-bottom: 15%;
-}
-
 .main-frame button {
   background: var(--background);
 }
@@ -499,6 +497,12 @@ header h1 span:hover {
 }
 
 /** PROJECTS **/
+
+.main-frame .main-description {
+  height: 100%;
+  display: grid;
+  align-content: space-between;
+}
 
 /** FOOTER **/
 .contact {
@@ -884,7 +888,7 @@ input[type='checkbox']:hover:not(:checked):not(:disabled) {
   max-height: 280px;
   overflow-y: scroll;
   border-radius: 5px;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 16 / 9;
 }
 
 #body-preview {
@@ -991,4 +995,9 @@ input[type='checkbox']:hover:not(:checked):not(:disabled) {
   #theme-button {
     top: 90%;
   }
+}
+
+
+.unavaillable {
+  cursor: no-drop;
 }

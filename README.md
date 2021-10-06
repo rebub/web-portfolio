@@ -6,16 +6,9 @@
 - CSS3
 - JS
 
-
-
-
 ## 📟 Coded in:
 
 - Visual Studio Code
-
-
-
-
 
 ## 💥 Details
 
@@ -24,8 +17,6 @@
 - Everything is smoothly animated
 - A proper dark/light mode with a switch toggle that saves the user's choice.
 - Website is dynamic and works as intented in a screen as small as 225px by 575px.
-
-
 
 
 ## ✅ And guess what? It's [Live](http://sandro-santos.com)! 
