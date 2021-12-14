@@ -55,7 +55,6 @@
   list-style: none;
   scrollbar-width: thin;
   box-sizing: border-box;
-  transition: all .15s ease;
   font-family: 'Inter', sans-serif;
 }
 
@@ -72,6 +71,7 @@
 body {
   font-weight: 500;
   color: var(--text);
+  transition: all .2s ease;
   background-color: var(--background);
 }
 
@@ -79,6 +79,7 @@ body {
 a {
   color: var(--text);
   text-decoration: none;
+  transition: all .3s ease;
 }
 
 a:hover {
@@ -91,17 +92,20 @@ nav {
   color: var(--text);
   padding: 0 1.5rem;
   max-width: 83em;
+  transition: all .2s ease;
   background-color: var(--background);
 }
 
 nav div {
   display: flex;
+  align-items: center;
+  transition: all .2s ease;
 }
 
 nav>div:first-child {
   display: flex;
   padding: 1.5rem 0;
-  align-items: center;
+  align-items: right;
   border-bottom: 2px solid var(--border);
 }
 
@@ -112,7 +116,7 @@ svg {
 }
 
 .nav-logo {
-  flex: 1 1 0%;
+  flex: 0.75 1 0%;
 }
 
 .nav-logo img {
@@ -126,7 +130,7 @@ svg {
 }
 
 .nav-margin {
-  margin: 0 0 0 1em;
+  margin: 0 0 0 3em;
 }
 
 .icon {
@@ -193,6 +197,8 @@ svg {
   background: var(--background);
   border-radius: var(--5pxradius);
   box-shadow: 0 0 10px #0000002b;
+  transition: all .3s ease;
+
 }
 
 /** DROPDOWN HEADER **/
@@ -276,6 +282,10 @@ section {
 
   .hamburguer:hover {
     background-color: var(--hover-transparent);
+  }
+
+  .nav-logo {
+    flex: 1 1 0%;
   }
 
   .nav-theme,
