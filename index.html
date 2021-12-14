@@ -1,8 +1,6 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <title>sandro's portfolio</title>
 
   <meta charset="UTF-8">
@@ -14,614 +12,190 @@
   <link rel="stylesheet" href="css/glider.min.css" />
   <link rel="icon" type="image/png" href="assets/images/icon/favicon.png" />
 
-
-  <script defer type="text/javascript" src="js/sliders.js"></script>
-  <script defer type="text/javascript" src="js/glider.min.js"></script>
+  <!-- <script defer type="text/javascript" src="js/sliders.js"></script> -->
+  <!-- <script defer type="text/javascript" src="js/glider.min.js"></script> -->
   <script defer type="text/javascript" src="js/navbar.js"></script>
   <script defer type="text/javascript" src="js/theme-toggle.js"></script>
-
   <script defer src="https://kit.fontawesome.com/82e80b8641.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
 </head>
 
-<body class="day">
+<body class="">
+
   <nav>
     <div>
-      <div class="brand">
+      <div class="nav-logo">
+        <img src="/assets/images/icon/icon.png" alt="sandro's logo">
+      </div>
+      <div class="hamburguer">
+        <svg viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+      <div class="nav-navigation">
+        <li class="nav-margin">Home</li>
+        <li class="nav-margin">About</li>
+        <li class="nav-margin">Projects</li>
+        <li class="nav-margin">
+          <a class="icon" href="#">
+            More
+            <svg viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </a></li>
+      </div>
 
-        <img id="logo" class="inverted" src="assets/images/icon/icon.png" alt="sandro's logo">
+      <div class="nav-contact">
+        <div class="nav-theme">
+          <input type="checkbox" id="theme-switch" class="switch" onclick="themeToggle()">
+          <label for="theme-switch">
+            <div>
+              <svg class="moon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+              </svg>
 
-        <div id="title">
-
-          <div id="word-mark">
-            <h1>sandro</h1>
-          </div>
-
+              <svg class="sun" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+          </label>
         </div>
-
+        <a class="icon" href="#">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+            <path
+              d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+          </svg> Contact</a>
       </div>
     </div>
-
-    <div>
-
-      <div id="menu-toggle" class="">
-        <div id="menu-icon">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-      </div>
-
-      <ul class="navbar">
-
-        <li class="nav-item"><a href="#about"><button>about</button></a></li>
-        <li class="nav-item"><a href="#projects"><button>projects</button></a></li>
-        <li class="nav-item"><a href="#skillsets"><button>skillset</button></a></li>
-        <li class="nav-item contact-item"><a href="#contact"><button>contact</button></a></li>
-        <li id="theme-button">
-          <p id="theme-text"></p>
-          <input type="checkbox" id="theme-switcher" class="switch" onclick="themeToggle()">
-        </li>
-
-      </ul>
-    </div>
-
   </nav>
 
-  <header>
-    <div>
-      <h1>i create <span>your</span> experiences</h1>
-      <a href="#projects"><button><i class="far fa-eye"></i> projects</button></a>
+  <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="nav-logo">
+        <img src="/assets/images/icon/icon.png" alt="sandro's logo">
+      </div>
+      <div class="dropdown-close">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fillRule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clipRule="evenodd" />
+        </svg>
+      </div>
     </div>
+    <div class="dropdown-list">
+      <ul>
+        <li>
+          <a class="icon" href="#">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
+                clip-rule="evenodd" />
+            </svg>
+            <span>About</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
+                clip-rule="evenodd" />
+            </svg>
+            <span>Projects</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path
+                d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z" />
+            </svg>
+            <span>Resume</span>
+          </a>
+        </li>
+        <label for="theme-switch">
+          <li>
+            <a class="icon">
+              <svg class="moon" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+              </svg>
 
-  </header>
+              <svg class="sun" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span id="theme-text-mobile"></span>
+            </a>
+          </li>
+        </label>
+      </ul>
 
-  <div id="about" class="about-me">
+      <div class="dropdown-divider"></div>
 
-    <div class="about-me-image">
-      <img src="assets/images/me/author.jpg" alt="sandro's picture">
+      <div class="dropdown-contact">
+        <a class="icon" href="mailto:rebub@vivaldi.net">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </svg>
+          <span> rebub@vivaldi.net</span>
+        </a>
+      </div>
+
+      <div class="dropdown-socials">
+        <ul>
+          <li>
+            <a class="icon" href="https://github.com/rebub" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>github.com/rebub</span>
+            </a>
+          </li>
+          <li>
+            <a class="icon" href="https://www.linkedin.com/in/sandro-santos-345b5b204/" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+              </svg>
+              <span>Sandro Santos </span>
+            </a>
+
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <div class="about-me-description">
-
-      <h1>👋 hello, i'm Sandro</h1>
-      <p>
-        I am a 20 year old front-end developer from Portugal that got interested in web building
-        & design 5 years ago and ever since then i just got hooked!
-      </p>
-      <br>
-
-      <a href="assets/pdf/curriculo.pdf" target="_blank">
-        <button><i class="fas fa-file-alt"></i> resume</button>
-      </a>
-
-      <a href="mailto:rebub@vivaldi.net"><button><i class="fas fa-paper-plane"></i>contact</button>
-      </a>
-    </div>
-
   </div>
 
-  <div id="projects"></div>
+  <section>
 
-  <div class="projects-section">
+  </section>
 
-    <h1>projects</h1>
+  <section class="skillset">
 
-    <div class="projects-desktop">
-
-      <div>
-
-        <div class="main-frame">
-
-          <div>
-
-            <div class="main-description">
-              <div>
-
-                <h2>portfolio <i class="fas fa-code"></i></h2>
-                <h3><i class="fas fa-user-astronaut"></i> my place on the web</h3>
-                <p>designing and building my personal website.</p>
-
-              </div>
-              <div>
-
-                <a href="http://sandro-santos.com"><button><i class="fas fa-broadcast-tower"></i> Live </button></a>
-                <a href="https://github.com/rebub/web-portfolio" target="_blank" rel="noopener noreferrer">
-                  <button><i class="fas fa-file-code"></i> Repo</button>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
-
-          <div class="preview-window">
-
-            <div id="body-preview">
-              <div class="hero">
-                <div class="hero-title"></div>
-                <div class="hero-btn"></div>
-              </div>
-
-              <div class="about">
-                <div class="about-image"></div>
-                <div class="about-title"></div>
-                <div class="about-text"></div>
-                <div class="about-btn"></div>
-              </div>
-
-              <div class="skills">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-              </div>
-
-              <div class="projects">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-              </div>
-
-              <div class="footer">
-                <div class="footer-title"></div>
-                <div class="footer-btn"></div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <div class="main-frame">
-
-          <div class="main-description">
-
-            <div>
-              <h2>CiTUR <i class="fas fa-ruler"></i></h2>
-
-              <div>
-                <h3><i class="fas fa-user-graduate"></i> internship</h3>
-                <p>redesigning & refactoring CiTUR.</p>
-
-              </div>
-            </div>
-
-            <div>
-              <button class="unavaillable"><i class="fas fa-file-code"></i> case study</button>
-            </div>
-
-          </div>
-
-          <div class="preview-window">
-            <img src="https://unsplash.it/1920/1080" alt="">
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- TODO APP -->
-
-      <div>
-
-        <div class="main-frame">
-
-          <div class="main-description">
-
-            <div>
-              <h2>Todo App <i class="fas fa-check"></i></h2>
-
-              <div>
-                <h3><i class="fas fa-wrench"></i> utility app</h3>
-                <p>todo app made with html, css & vanilla js.</p>
-
-              </div>
-
-            </div>
-
-            <div>
-
-              <a href="https://rebub.github.io/todo-app/"><button><i class="fas fa-broadcast-tower"></i> Live
-                </button></a>
-              <a href="https://github.com/rebub/todo-app" target="_blank" rel="noopener noreferrer">
-                <button><i class="fas fa-file-code"></i> Repo</button>
-              </a>
-
-            </div>
-
-          </div>
-
-          <div class="preview-window">
-            <img src="assets/previews/todo-preview.gif" alt="">
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- WEATHER APP -->
-
-      <div>
-
-        <div class="main-frame">
-
-          <div class="main-description">
-
-            <div>
-              <h2>weather app <i class="fas fa-cloud"></i></h2>
-
-              <div>
-                <h3><i class="fas fa-wrench"></i> utility app</h3>
-                <p>weather app made in react.</p>
-
-              </div>
-            </div>
-
-            <div>
-
-              <a href="https://rebub.github.io/weather-app-react"><button class="unavaillable"><i
-                    class="fas fa-broadcast-tower"></i> Live
-                </button></a>
-              <a href="https://github.com/rebub/weather-app-react" target="_blank" rel="noopener noreferrer">
-                <button><i class="fas fa-file-code"></i> Repo</button>
-              </a>
-
-            </div>
-
-          </div>
-
-          <div class="preview-window">
-            <img src="https://unsplash.it/640/425 " alt="">
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="glider-contain">
-
-      <div class="projects-slider">
-        <a href="https://github.com/rebub/web-portfolio" target="_blank" rel="noopener noreferrer">
-
-          <h2>portfolio <i class="fas fa-code"></i></h2>
-
-          <div>
-
-            <h3><i class="fas fa-address-card"></i> Presentation</h3>
-            <p>designing and building my personal website.</p>
-
-          </div>
-
-        </a>
-
-        <a>
-
-          <h2>CiTUR <i class="fas fa-ruler"></i></h2>
-
-          <div>
-            <h3><i class="fas fa-user-graduate"></i> Internship</h3>
-            <p>Refactoring CiTUR while in an internship.</p>
-          </div>
-
-        </a>
-
-        <a>
-
-          <h2>others <i class="fas fa-info"></i></h2>
-
-          <div>
-            <h3><i class="fas fa-street-view"></i> 360ª Virtual Tour</h3>
-            <p>A 360º tour of ESTM (not available anymore).</p>
-          </div>
-
-        </a>
-
-        <a>
-
-          <h2>todo <i class="fas fa-exclamation"></i></h2>
-
-          <div>
-            <h3><i class="fas fa-running"></i> next project</h3>
-            <p>we'll have to wait and see</p>
-          </div>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div id="skillsets"></div>
-
-  <div class="skillsets-section">
-
-    <h1>skillsets</h1>
-
-    <div class="skillsets-desktop">
-
-      <div>
-        <a>
-
-          <h2>development <i class="fas fa-code"></i></h2>
-
-          <div>
-
-            <div>
-              <h3><i class="fab fa-html5"></i> HTML5 </h3>
-              <p>The backbone of every website.</p>
-            </div>
-
-            <div>
-              <h3><i class="fab fa-css3-alt"></i> CSS3 </h3>
-              <p>Adds styling to websites.</p>
-            </div>
-
-            <div>
-              <h3><i class="fab fa-js-square"></i> JS </h3>
-              <p>Adds extra functionality.</p>
-            </div>
-
-          </div>
-
-        </a>
-      </div>
-
-
-      <div>
-        <a>
-
-          <h2>designing <i class="fas fa-fill-drip"></i></h2>
-
-          <div>
-
-            <div>
-              <h3><img src="/assets/images/svgs/figma/figma.svg" alt="Figma Logo"> Figma </h3>
-              <p>Web & app design focused app.</p>
-            </div>
-
-            <div>
-              <h3><img src="/assets/images/svgs/adobe/indesign.svg" alt="Adobe Indesign Logo"> Adobe Indesign </h3>
-              <p>Layout & page design software.</p>
-            </div>
-
-            <div>
-              <h3><img src="/assets/images/svgs/adobe/xd.svg" alt="Adobe XD Logo"> Adobe XD </h3>
-              <p>UX design software.</p>
-            </div>
-
-          </div>
-
-        </a>
-      </div>
-
-      <div>
-        <a>
-
-          <h2>web builders <i class="fas fa-cloud"></i></h2>
-
-          <div>
-            <h3><i class="fab fa-wordpress-simple"></i> Wordpress </h3>
-            <p>Widely used website builder.</p>
-          </div>
-
-          <div>
-            <h3><i class="fas fa-user-friends"></i> Xenforo </h3>
-            <p>Forum style website builder.</p>
-          </div>
-
-        </a>
-      </div>
-
-      <div>
-        <a>
-
-          <h2>extra <i class="fas fa-check"></i></h2>
-
-          <div>
-            <h3><img src="/assets/images/svgs/adobe/photoshop.svg" alt="Adobe Photoshop Logo"> Image Manipulation</h3>
-            <p>Photoshop & Illustrator.</p>
-          </div>
-
-          <div>
-            <h3><img src="/assets/images/svgs/adobe/premiere_pro.svg" alt="Adobe Premiere Pro Logo"> Video Manipulation
-            </h3>
-            <p>After FX, Premiere Pro.</p>
-          </div>
-
-          <div>
-            <h3><img src="assets/images/svgs/adobe/audition.svg" alt="Adobe Audition Logo"> Audio Manipulation
-            </h3>
-            <p>Audition, Audacity.</p>
-          </div>
-
-        </a>
-      </div>
-
-    </div>
-
-    <div class="glider-contain">
-
-      <div class="skillsets-slider">
-
-        <a>
-
-          <h2>development <i class="fas fa-code"></i></h2>
-
-          <div>
-            <h3><i class="fab fa-html5"></i> HTML5 </h3>
-            <p>The backbone of every website.</p>
-          </div>
-
-          <div>
-            <h3><i class="fab fa-css3-alt"></i> CSS3</h3>
-            <p>Adds styling to websites.</p>
-          </div>
-
-          <div>
-            <h3><i class="fab fa-js-square"></i> JS </h3>
-            <p>Adds extra functionality.</p>
-          </div>
-
-        </a>
-
-        <a>
-
-          <h2>designing <i class="fas fa-fill-drip"></i></h2>
-
-          <div>
-            <h3><img src="/assets/images/svgs/figma/figma.svg" alt="Figma Logo"> Figma </h3>
-            <p>Web & app design focused app.</p>
-          </div>
-
-          <div>
-            <h3><img src="/assets/images/svgs/adobe/indesign.svg" alt="Adobe Indesign Logo"> Indesign </h3>
-            <p>Layout & page design software.</p>
-          </div>
-
-        </a>
-
-        <a>
-
-          <h2>web builders <i class="fas fa-cloud"></i></h2>
-
-          <div>
-            <h3><i class="fab fa-wordpress-simple"></i> Wordpress </h3>
-            <p>Widely used website builder.</p>
-          </div>
-
-          <div>
-            <h3><i class="fas fa-user-friends"></i> Xenforo </h3>
-            <p>Forum style website builder.</p>
-          </div>
-
-        </a>
-
-        <a>
-
-          <h2>extra <i class="fas fa-check"></i></h2>
-
-          <div>
-            <h3><img src="/assets/images/svgs/adobe/photoshop.svg" alt="Adobe Photoshop Logo"> Image Manipulation</h3>
-            <p>Photoshop & Illustrator.</p>
-          </div>
-
-          <div>
-            <h3><img src="/assets/images/svgs/adobe/premiere_pro.svg" alt="Adobe Premiere Pro Logo"> Video Manipulation
-            </h3>
-            <p>After FX, Premiere Pro.</p>
-          </div>
-
-          <div>
-            <h3><img src="/assets/images/svgs/adobe/audition.svg" alt="Adobe Audition Logo"> Audio Manipulation
-            </h3>
-            <p>Audition, Audacity.</p>
-          </div>
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
+  </section>
 
 </body>
-
-<footer>
-
-  <div class="contact">
-    <div id="contact">
-      <h1>contact</h1>
-      <a href="mailto:rebub@vivaldi.net"><button><i class="fas fa-paper-plane"></i> Email</button></a>
-    </div>
-
-    <form name="contact" method="POST" data-netlify="true">
-      <p>
-        <label>Name<br>
-          <input type="text" name="name" />
-        </label>
-      </p>
-      <p>
-        <label>Email<br>
-          <input type="email" name="email" />
-        </label>
-      </p>
-      <p>
-        <label>Message<br>
-          <textarea name="message"></textarea>
-        </label>
-      </p>
-      <p>
-        <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
-      </p>
-    </form>
-  </div>
-
-
-
-  <div class="social-media">
-
-    <div class="copyright">
-
-      <p>&copy;
-
-        <script>
-          document.write(new Date().getFullYear());
-        </script> Sandro Santos
-
-      </p>
-
-    </div>
-
-    <div class="social-icons">
-
-      <li>
-        <a href="https://dribbble.com/reub" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-dribbble"></i>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://github.com/rebub" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.linkedin.com/in/sandro-santos-345b5b204/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin"></i>
-        </a>
-
-      </li>
-
-      <li>
-        <a href="https://codepen.io/rebub" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-codepen"></i>
-        </a>
-      </li>
-
-    </div>
-
-  </div>
-
-</footer>
 
 </html>

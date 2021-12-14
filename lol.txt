@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>sandro's portfolio</title>
+
+  <meta charset="UTF-8">
+  <meta name="author" content="Sandro Santos" />
+  <meta name="description" content="sandro's portfolio 🔥" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/glider.min.css" />
+  <link rel="icon" type="image/png" href="assets/images/icon/favicon.png" />
+
+
+  <script defer type="text/javascript" src="js/sliders.js"></script>
+  <script defer type="text/javascript" src="js/glider.min.js"></script>
+  <script defer type="text/javascript" src="js/navbar.js"></script>
+  <script defer type="text/javascript" src="js/theme-toggle.js"></script>
+
+  <script defer src="https://kit.fontawesome.com/82e80b8641.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body class="day">
+  <nav>
+    <div>
+      <div class="brand">
+
+        <img id="logo" class="inverted" src="assets/images/icon/icon.png" alt="sandro's logo">
+
+        <div id="title">
+
+          <div id="word-mark">
+            <h1>sandro</h1>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div>
+
+      <div id="menu-toggle" class="">
+        <div id="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+
+      <ul class="navbar">
+        <h2>navigation</h2>
+        <li class="nav-item"><a href="#about"><button>about</button></a></li>
+        <li class="nav-item"><a href="#projects"><button>projects</button></a></li>
+        <li class="nav-item"><a href="#skillsets"><button>skillset</button></a></li>
+        <li class="nav-item contact-item"><a href="#contact"><button>contact</button></a></li>
+        <li id="theme-button">
+          <p id="theme-text"></p>
+          <input type="checkbox" id="theme-switcher" class="switch" onclick="themeToggle()">
+        </li>
+
+      </ul>
+    </div>
+
+  </nav>
+
+  <header>
+    <div>
+      <h1>i create <span>your</span> experiences</h1>
+      <a href="#projects"><button><i class="far fa-eye"></i> projects</button></a>
+    </div>
+
+  </header>
+
+  <div id="about" class="about-me">
+
+    <div class="about-me-image">
+      <img src="assets/images/me/author.jpg" alt="sandro's picture">
+    </div>
+
+    <div class="about-me-description">
+
+      <h1>👋 hello, i'm Sandro</h1>
+      <p>
+        I am a 20 year old front-end developer from Portugal that got interested in web building
+        & design 5 years ago and ever since then i just got hooked!
+      </p>
+      <br>
+
+      <a href="assets/pdf/curriculo.pdf" target="_blank">
+        <button><i class="fas fa-file-alt"></i> resume</button>
+      </a>
+
+      <a href="mailto:rebub@vivaldi.net"><button><i class="fas fa-paper-plane"></i>contact</button>
+      </a>
+    </div>
+
+  </div>
+
+  <div id="projects"></div>
+
+  <div class="projects-section">
+
+    <h1>projects</h1>
+
+    <div class="projects-desktop">
+
+      <div>
+
+        <div class="main-frame">
+
+          <div>
+
+            <div class="main-description">
+              <div>
+
+                <h2>portfolio <i class="fas fa-code"></i></h2>
+                <h3><i class="fas fa-user-astronaut"></i> my place on the web</h3>
+                <p>designing and building my personal website.</p>
+
+              </div>
+              <div>
+
+                <a href="http://sandro-santos.com"><button><i class="fas fa-broadcast-tower"></i> Live </button></a>
+                <a href="https://github.com/rebub/web-portfolio" target="_blank" rel="noopener noreferrer">
+                  <button><i class="fas fa-file-code"></i> Repo</button>
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="preview-window">
+
+            <div id="body-preview">
+              <div class="hero">
+                <div class="hero-title"></div>
+                <div class="hero-btn"></div>
+              </div>
+
+              <div class="about">
+                <div class="about-image"></div>
+                <div class="about-title"></div>
+                <div class="about-text"></div>
+                <div class="about-btn"></div>
+              </div>
+
+              <div class="skills">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+              </div>
+
+              <div class="projects">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+              </div>
+
+              <div class="footer">
+                <div class="footer-title"></div>
+                <div class="footer-btn"></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="main-frame">
+
+          <div class="main-description">
+
+            <div>
+              <h2>CiTUR <i class="fas fa-ruler"></i></h2>
+
+              <div>
+                <h3><i class="fas fa-user-graduate"></i> internship</h3>
+                <p>redesigning & refactoring CiTUR.</p>
+
+              </div>
+            </div>
+
+            <div>
+              <button class="unavaillable"><i class="fas fa-file-code"></i> case study</button>
+            </div>
+
+          </div>
+
+          <div class="preview-window">
+            <img src="https://unsplash.it/1920/1080" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- TODO APP -->
+
+      <div>
+
+        <div class="main-frame">
+
+          <div class="main-description">
+
+            <div>
+              <h2>Todo App <i class="fas fa-check"></i></h2>
+
+              <div>
+                <h3><i class="fas fa-wrench"></i> utility app</h3>
+                <p>todo app made with html, css & vanilla js.</p>
+
+              </div>
+
+            </div>
+
+            <div>
+
+              <a href="https://rebub.github.io/todo-app/"><button><i class="fas fa-broadcast-tower"></i> Live
+                </button></a>
+              <a href="https://github.com/rebub/todo-app" target="_blank" rel="noopener noreferrer">
+                <button><i class="fas fa-file-code"></i> Repo</button>
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="preview-window">
+            <img src="assets/previews/todo-preview.gif" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- WEATHER APP -->
+
+      <div>
+
+        <div class="main-frame">
+
+          <div class="main-description">
+
+            <div>
+              <h2>weather app <i class="fas fa-cloud"></i></h2>
+
+              <div>
+                <h3><i class="fas fa-wrench"></i> utility app</h3>
+                <p>weather app made in react.</p>
+
+              </div>
+            </div>
+
+            <div>
+
+              <a href="https://rebub.github.io/weather-app-react"><button class="unavaillable"><i
+                    class="fas fa-broadcast-tower"></i> Live
+                </button></a>
+              <a href="https://github.com/rebub/weather-app-react" target="_blank" rel="noopener noreferrer">
+                <button><i class="fas fa-file-code"></i> Repo</button>
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="preview-window">
+            <img src="https://unsplash.it/640/425 " alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="glider-contain">
+
+      <div class="projects-slider">
+        <a href="https://github.com/rebub/web-portfolio" target="_blank" rel="noopener noreferrer">
+
+          <h2>portfolio <i class="fas fa-code"></i></h2>
+
+          <div>
+
+            <h3><i class="fas fa-address-card"></i> Presentation</h3>
+            <p>designing and building my personal website.</p>
+
+          </div>
+
+        </a>
+
+        <a>
+
+          <h2>CiTUR <i class="fas fa-ruler"></i></h2>
+
+          <div>
+            <h3><i class="fas fa-user-graduate"></i> Internship</h3>
+            <p>Refactoring CiTUR while in an internship.</p>
+          </div>
+
+        </a>
+
+        <a>
+
+          <h2>others <i class="fas fa-info"></i></h2>
+
+          <div>
+            <h3><i class="fas fa-street-view"></i> 360ª Virtual Tour</h3>
+            <p>A 360º tour of ESTM (not available anymore).</p>
+          </div>
+
+        </a>
+
+        <a>
+
+          <h2>todo <i class="fas fa-exclamation"></i></h2>
+
+          <div>
+            <h3><i class="fas fa-running"></i> next project</h3>
+            <p>we'll have to wait and see</p>
+          </div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div id="skillsets"></div>
+
+  <div class="skillsets-section">
+
+    <h1>skillsets</h1>
+
+    <div class="skillsets-desktop">
+
+      <div>
+        <a>
+
+          <h2>development <i class="fas fa-code"></i></h2>
+
+          <div>
+
+            <div>
+              <h3><i class="fab fa-html5"></i> HTML5 </h3>
+              <p>The backbone of every website.</p>
+            </div>
+
+            <div>
+              <h3><i class="fab fa-css3-alt"></i> CSS3 </h3>
+              <p>Adds styling to websites.</p>
+            </div>
+
+            <div>
+              <h3><i class="fab fa-js-square"></i> JS </h3>
+              <p>Adds extra functionality.</p>
+            </div>
+
+          </div>
+
+        </a>
+      </div>
+
+
+      <div>
+        <a>
+
+          <h2>designing <i class="fas fa-fill-drip"></i></h2>
+
+          <div>
+
+            <div>
+              <h3><img src="/assets/images/svgs/figma/figma.svg" alt="Figma Logo"> Figma </h3>
+              <p>Web & app design focused app.</p>
+            </div>
+
+            <div>
+              <h3><img src="/assets/images/svgs/adobe/indesign.svg" alt="Adobe Indesign Logo"> Adobe Indesign </h3>
+              <p>Layout & page design software.</p>
+            </div>
+
+            <div>
+              <h3><img src="/assets/images/svgs/adobe/xd.svg" alt="Adobe XD Logo"> Adobe XD </h3>
+              <p>UX design software.</p>
+            </div>
+
+          </div>
+
+        </a>
+      </div>
+
+      <div>
+        <a>
+
+          <h2>web builders <i class="fas fa-cloud"></i></h2>
+
+          <div>
+            <h3><i class="fab fa-wordpress-simple"></i> Wordpress </h3>
+            <p>Widely used website builder.</p>
+          </div>
+
+          <div>
+            <h3><i class="fas fa-user-friends"></i> Xenforo </h3>
+            <p>Forum style website builder.</p>
+          </div>
+
+        </a>
+      </div>
+
+      <div>
+        <a>
+
+          <h2>extra <i class="fas fa-check"></i></h2>
+
+          <div>
+            <h3><img src="/assets/images/svgs/adobe/photoshop.svg" alt="Adobe Photoshop Logo"> Image Manipulation</h3>
+            <p>Photoshop & Illustrator.</p>
+          </div>
+
+          <div>
+            <h3><img src="/assets/images/svgs/adobe/premiere_pro.svg" alt="Adobe Premiere Pro Logo"> Video Manipulation
+            </h3>
+            <p>After FX, Premiere Pro.</p>
+          </div>
+
+          <div>
+            <h3><img src="assets/images/svgs/adobe/audition.svg" alt="Adobe Audition Logo"> Audio Manipulation
+            </h3>
+            <p>Audition, Audacity.</p>
+          </div>
+
+        </a>
+      </div>
+
+    </div>
+
+    <div class="glider-contain">
+
+      <div class="skillsets-slider">
+
+        <a>
+
+          <h2>development <i class="fas fa-code"></i></h2>
+
+          <div>
+            <h3><i class="fab fa-html5"></i> HTML5 </h3>
+            <p>The backbone of every website.</p>
+          </div>
+
+          <div>
+            <h3><i class="fab fa-css3-alt"></i> CSS3</h3>
+            <p>Adds styling to websites.</p>
+          </div>
+
+          <div>
+            <h3><i class="fab fa-js-square"></i> JS </h3>
+            <p>Adds extra functionality.</p>
+          </div>
+
+        </a>
+
+        <a>
+
+          <h2>designing <i class="fas fa-fill-drip"></i></h2>
+
+          <div>
+            <h3><img src="/assets/images/svgs/figma/figma.svg" alt="Figma Logo"> Figma </h3>
+            <p>Web & app design focused app.</p>
+          </div>
+
+          <div>
+            <h3><img src="/assets/images/svgs/adobe/indesign.svg" alt="Adobe Indesign Logo"> Indesign </h3>
+            <p>Layout & page design software.</p>
+          </div>
+
+        </a>
+
+        <a>
+
+          <h2>web builders <i class="fas fa-cloud"></i></h2>
+
+          <div>
+            <h3><i class="fab fa-wordpress-simple"></i> Wordpress </h3>
+            <p>Widely used website builder.</p>
+          </div>
+
+          <div>
+            <h3><i class="fas fa-user-friends"></i> Xenforo </h3>
+            <p>Forum style website builder.</p>
+          </div>
+
+        </a>
+
+        <a>
+
+          <h2>extra <i class="fas fa-check"></i></h2>
+
+          <div>
+            <h3><img src="/assets/images/svgs/adobe/photoshop.svg" alt="Adobe Photoshop Logo"> Image Manipulation</h3>
+            <p>Photoshop & Illustrator.</p>
+          </div>
+
+          <div>
+            <h3><img src="/assets/images/svgs/adobe/premiere_pro.svg" alt="Adobe Premiere Pro Logo"> Video Manipulation
+            </h3>
+            <p>After FX, Premiere Pro.</p>
+          </div>
+
+          <div>
+            <h3><img src="/assets/images/svgs/adobe/audition.svg" alt="Adobe Audition Logo"> Audio Manipulation
+            </h3>
+            <p>Audition, Audacity.</p>
+          </div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+
+<footer>
+
+  <div class="contact">
+    <div id="contact">
+      <h1>contact</h1>
+      <a href="mailto:rebub@vivaldi.net"><button><i class="fas fa-paper-plane"></i> Email</button></a>
+    </div>
+
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label>Name<br>
+          <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <label>Email<br>
+          <input type="email" name="email" />
+        </label>
+      </p>
+      <p>
+        <label>Message<br>
+          <textarea name="message"></textarea>
+        </label>
+      </p>
+      <p>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+      </p>
+    </form>
+  </div>
+
+
+
+  <div class="social-media">
+
+    <div class="copyright">
+
+      <p>&copy;
+
+        <script>
+          document.write(new Date().getFullYear());
+        </script> Sandro Santos
+
+      </p>
+
+    </div>
+
+    <div class="social-icons">
+
+      <li>
+        <a href="https://dribbble.com/reub" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-dribbble"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://github.com/rebub" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.linkedin.com/in/sandro-santos-345b5b204/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+      </li>
+
+      <li>
+        <a href="https://codepen.io/rebub" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-codepen"></i>
+        </a>
+      </li>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</html>

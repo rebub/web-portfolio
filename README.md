@@ -1,22 +1,18 @@
 # sandro's web portfolio
 
-## 💻 My web portfolio is composed of:
+## 💻 My web portfolio was made with:
 
-- HTML5
-- CSS3
 - JS
+- CSS
+- HTML5
 
 ## 📟 Coded in:
 
 - Visual Studio Code
 
-## 💥 Details
-
 ### A few cool things that it has such as:
 
-- Everything is smoothly animated
-- A proper dark/light mode with a switch toggle that saves the user's choice.
-- Website is dynamic and works as intented in a screen as small as 225px by 575px.
-
+- A proper dark/light mode that is saved.
+- Everything is smoothly animated and responsive.
 
 ## ✅ And guess what? It's [Live](http://sandro-santos.com)! 
