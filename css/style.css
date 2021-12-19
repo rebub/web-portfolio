@@ -10,7 +10,7 @@
   --light: #E7EAF5;
 
   --text-day: #6b7280;
-  --border-day: #D1D5DB;
+  --border-day: #e7e7e7;
   --text-hover-day: #111827;
 
   --text-night: #afbacf;
@@ -22,8 +22,6 @@
   --accent-color-day: #3D67D4;
 
   --5pxradius: 5px;
-
-
 }
 
 .day {
@@ -45,7 +43,28 @@
   --text-hover: white;
   --border: var(--border-night);
   --accent-color: var(--accent-color-day);
-  --hover-transparent: rgba(255, 255, 255, 0.199);
+  --hover-transparent: rgba(255, 255, 255, 0.041);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--overlay) #ffffff;
+}
+
+/** Chrome, Edge, and Safari **/
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--overlay);
+  border-radius: 5px;
 }
 
 /** GENERAL SETTINGS **/
@@ -55,6 +74,7 @@
   list-style: none;
   scrollbar-width: thin;
   box-sizing: border-box;
+  transition: all .2s ease;
   font-family: 'Inter', sans-serif;
 }
 
@@ -69,6 +89,8 @@
 
 /** BODY SETTINGS **/
 body {
+  margin: 0 auto;
+  max-width: 1280px;
   font-weight: 500;
   color: var(--text);
   transition: all .2s ease;
@@ -79,19 +101,26 @@ body {
 a {
   color: var(--text);
   text-decoration: none;
-  transition: all .3s ease;
 }
 
 a:hover {
   color: var(--text-hover);
 }
 
+i {
+  padding: 0 5px 0 0;
+}
+
+/** image setting **/
+img {
+  width: 100%;
+  border-radius: var(--5pxradius);
+}
+
 /** NAVBAR SETTINGS **/
 nav {
-  margin: 0 auto;
   color: var(--text);
   padding: 0 1.5rem;
-  max-width: 83em;
   transition: all .2s ease;
   background-color: var(--background);
 }
@@ -151,7 +180,7 @@ svg {
   margin-right: 1.5em;
 }
 
-.hamburguer {
+.dropdown-hamburguer {
   display: none;
 }
 
@@ -180,6 +209,16 @@ svg {
   padding: .5em 1em;
   border-radius: var(--5pxradius);
   background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.day .nav-contact a:hover {
+  background-color: var(--text);
+  border: 2px solid var(--text);
+}
+
+.nav-contact a:hover {
+  background-color: transparent;
 }
 
 .nav-contact a svg {
@@ -191,14 +230,12 @@ svg {
   top: 0;
   left: 0;
   right: 0;
-  display: none;
-  margin: 30px 28px;
+  margin: 20px 18px;
   position: absolute;
+  transition: all .3s ease;
   background: var(--background);
   border-radius: var(--5pxradius);
   box-shadow: 0 0 10px #0000002b;
-  transition: all .3s ease;
-
 }
 
 /** DROPDOWN HEADER **/
@@ -230,7 +267,7 @@ svg {
 
 .dropdown-list li:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.007);
+  background-color: var(--hover-transparent);
 }
 
 /** DROPDOWN DIVIDER **/
@@ -242,21 +279,52 @@ svg {
 /** DROPDOWN CONTACT **/
 .dropdown-contact {
   padding: .75rem;
+  transition: all .3s ease;
 }
 
 .dropdown-contact:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.007);
+  background-color: var(--hover-transparent);
 }
 
-/** SECTION **/
-section {
-  padding: 1.5rem;
+.hero-section {
+  gap: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10rem 1.5rem;
 }
 
-/** SKILLSET SECTION **/
-.skillset {}
+.hero-section h1 {
+  font-size: calc(3vw + 2vh + 2em);
+}
 
+.hero-section-contact {
+  gap: 1em;
+  display: flex;
+  margin-top: 1em;
+}
+
+.hero-section-contact a {
+  fill: white;
+  color: white;
+  padding: .5em 1em;
+  border-radius: var(--5pxradius);
+  background-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.hero-section-contact a:hover {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+}
+
+.hero-section-contact a svg {
+  fill: white;
+}
+
+.hero-section h2 svg {
+  fill: red;
+}
 
 /** 1024PX MEDIA QUERY **/
 
@@ -273,14 +341,14 @@ section {
 /** 832PX MEDIA QUERY **/
 @media only screen and (max-width:52em) {
 
-  .hamburguer {
+  .dropdown-hamburguer {
     display: block;
     padding: .5rem;
     cursor: pointer;
     border-radius: var(--5pxradius);
   }
 
-  .hamburguer:hover {
+  .dropdown-hamburguer:hover {
     background-color: var(--hover-transparent);
   }
 
@@ -294,6 +362,13 @@ section {
     display: none;
   }
 
+  /** hero section **/
+  .hero-section {
+    gap: 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 5rem 1.5rem;
+  }
 
   /** THEME SWITCHER **/
   #theme-button {
