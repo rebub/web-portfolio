@@ -20,12 +20,22 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
+
 <body class="">
 
   <nav>
     <div>
       <div class="nav-logo">
-        <img src="/assets/images/icon/icon.png" alt="sandro's logo">
+        <img id="logo" src="/assets/images/icon/icon.png" alt="sandro's logo">
+
+        <div id="title">
+
+          <div id="logo-name">
+            <h1>sandro</h1>
+          </div>
+
+        </div>
+
       </div>
       <div id="dropdown-hamburguer" class="dropdown-hamburguer">
         <svg viewBox="0 0 20 20" fill="currentColor">
@@ -34,12 +44,11 @@
             clip-rule="evenodd" />
         </svg>
       </div>
-      <div class="nav-navigation">
-        <li class="nav-margin">Home</li>
+      <ul class="nav-navigation">
         <li class="nav-margin">About</li>
         <li class="nav-margin">Projects</li>
         <li class="nav-margin">Other</li>
-      </div>
+      </ul>
 
       <div class="nav-contact">
         <div class="nav-theme">
@@ -169,7 +178,19 @@
   </div>
 
   <section>
-    <div class="hero-section">
+
+    <div class="cta-section">
+      <h1>i create <span>your</span> experiences</h1>
+      <a class="icon" href="#about"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z"
+            clip-rule="evenodd" />
+        </svg>down</a>
+    </div>
+
+
+    <div id="about" class="hero-section">
       <div>
         <h1>i'm sandro</h1>
         <h2>web developer
@@ -200,6 +221,7 @@
         <img src="/assets/images/me/author.jpg" alt="">
       </div>
     </div>
+
   </section>
 
 </body>

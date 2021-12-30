@@ -4,8 +4,8 @@
 
 /** VARIABLES **/
 :root {
-  --darker: #353854;
-  --dark: #2C2D45;
+  --darker: #1e1e2f;
+  --dark: #14141f;
   --lighter: #efefef;
   --light: #E7EAF5;
 
@@ -32,6 +32,7 @@
   --border: var(--border-day);
   --text-hover: var(--text-hover-day);
   --accent-color: var(--accent-color-day);
+  --transparent-navbar: rgba(255, 255, 255, .5);
   --hover-transparent: rgba(129, 129, 129, 0.199);
 }
 
@@ -43,6 +44,7 @@
   --text-hover: white;
   --border: var(--border-night);
   --accent-color: var(--accent-color-day);
+  --transparent-navbar: rgba(20, 20, 31, .5);
   --hover-transparent: rgba(255, 255, 255, 0.041);
 }
 
@@ -119,13 +121,19 @@ img {
 
 /** NAVBAR SETTINGS **/
 nav {
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: fixed;
   color: var(--text);
   padding: 0 1.5rem;
   transition: all .2s ease;
-  background-color: var(--background);
+  background-color: var(--transparent-navbar);
+  backdrop-filter: blur(20px);
 }
 
-nav div {
+nav div,
+nav ul {
   display: flex;
   align-items: center;
   transition: all .2s ease;
@@ -134,8 +142,8 @@ nav div {
 nav>div:first-child {
   display: flex;
   padding: 1.5rem 0;
-  align-items: right;
-  border-bottom: 2px solid var(--border);
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 svg {
@@ -145,13 +153,29 @@ svg {
 }
 
 .nav-logo {
-  flex: 0.75 1 0%;
+  flex: 1 1 100%;
 }
 
 .nav-logo img {
   width: 2em;
   height: 2em;
   filter: invert(var(--invert));
+}
+
+.navbar-addon {}
+
+.navbar-addon #logo-name {
+  opacity: 1;
+  transform: translateX(-2em);
+}
+
+.navbar-addon #logo {
+  opacity: 0;
+}
+
+#logo-name {
+  opacity: 0;
+  cursor: default;
 }
 
 .nav-contact {
@@ -165,10 +189,6 @@ svg {
 .icon {
   display: flex;
   gap: .25em;
-}
-
-.nav-navigation {
-  flex: 1 1 10%;
 }
 
 .nav-navigation li:hover {
@@ -287,6 +307,18 @@ svg {
   background-color: var(--hover-transparent);
 }
 
+.cta-section {
+  gap: 1.5em;
+  display: grid;
+  justify-items: center;
+  justify-content: space-around;
+  margin: calc(50vh - 50px) 0 calc(50vh) 0;
+}
+
+.cta-section a {
+  width: max-content;
+}
+
 .hero-section {
   gap: 2em;
   display: grid;
@@ -304,7 +336,8 @@ svg {
   margin-top: 1em;
 }
 
-.hero-section-contact a {
+.hero-section-contact a,
+.cta-section a {
   fill: white;
   color: white;
   padding: .5em 1em;
@@ -313,12 +346,14 @@ svg {
   border: 2px solid var(--accent-color);
 }
 
-.hero-section-contact a:hover {
+.hero-section-contact a:hover,
+.cta-section a:hover {
   background-color: transparent;
   border: 2px solid var(--accent-color);
 }
 
-.hero-section-contact a svg {
+.hero-section-contact a svg,
+.cta-section a svg {
   fill: white;
 }
 
