@@ -76,7 +76,7 @@
   list-style: none;
   scrollbar-width: thin;
   box-sizing: border-box;
-  transition: all .2s ease;
+  /**transition: all .2s ease;**/
   font-family: 'Inter', sans-serif;
 }
 
@@ -166,6 +166,7 @@ svg {
 
 .navbar-addon #logo-name {
   opacity: 1;
+  cursor: pointer;
   transform: translateX(-2em);
 }
 
@@ -187,6 +188,7 @@ svg {
 }
 
 .icon {
+  transition: all .15s ease-in-out;
   display: flex;
   gap: .25em;
 }
@@ -250,8 +252,8 @@ svg {
   top: 0;
   left: 0;
   right: 0;
+  position: fixed;
   margin: 20px 18px;
-  position: absolute;
   transition: all .3s ease;
   background: var(--background);
   border-radius: var(--5pxradius);
