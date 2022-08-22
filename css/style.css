@@ -9,11 +9,11 @@
   --lighter: #efefef;
   --light: #E7EAF5;
 
-  --text-day: #6b7280;
+  --text-day: #333333;
   --border-day: #e7e7e7;
   --text-hover-day: #111827;
 
-  --text-night: #afbacf;
+  --text-night: #ffffff;
   --border-night: #f3f4f610;
   --text-hover-night: #b5ccff;
 
@@ -183,19 +183,29 @@ svg {
   justify-content: flex-end;
 }
 
-.nav-margin {
-  margin: 0 0 0 3em;
-}
-
 .icon {
   transition: all .15s ease-in-out;
   display: flex;
   gap: .25em;
 }
 
+.nav-navigation {
+  margin: 0 1em;
+  padding: 0 .5em;
+  border-radius: var(--5pxradius);
+  border: 2px solid var(--accent-color);
+}
+
+.nav-navigation li {
+  padding: 0.5em 1rem;
+  transition: all .3s;
+}
+
 .nav-navigation li:hover {
   cursor: pointer;
-  color: var(--text-hover);
+  background-color: var(--border);
+  cursor: pointer;
+  border-radius: var(--5pxradius);
 }
 
 .nav-navigation li:last-child {
@@ -207,10 +217,6 @@ svg {
 }
 
 /** NAVBAR THEME SETTINGS **/
-.nav-theme {
-  margin-right: 1em;
-}
-
 .nav-theme input {
   display: none;
 }
@@ -284,6 +290,7 @@ svg {
 
 .dropdown-list li {
   padding: .75rem;
+  transition: all .3s ease;
   border-radius: var(--5pxradius);
 }
 
@@ -302,6 +309,7 @@ svg {
 .dropdown-contact {
   padding: .75rem;
   transition: all .3s ease;
+  border-radius: var(--5pxradius);
 }
 
 .dropdown-contact:hover {
