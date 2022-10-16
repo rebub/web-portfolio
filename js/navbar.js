@@ -12,8 +12,8 @@ $(() => {
         .add("#logo")
         .on("click", () => {
             $("html,body").animate({
-                    scrollTop: 0,
-                },
+                scrollTop: 0,
+            },
                 150
             );
         });
@@ -24,9 +24,11 @@ $(() => {
 var dropdown = document.getElementById("dropdown-menu")
 
 document.getElementById("dropdown-hamburguer").addEventListener("click", function () {
+    document.body.style.overflow = "hidden";
     dropdown.style.display = dropdown.style.display === "none" ? "" : "none";
 }, false);
 
 document.getElementById("dropdown-close").addEventListener("click", function () {
+    document.body.style.overflow = "auto";
     dropdown.style.display = dropdown.style.display === "none" ? "" : "none";
 }, false);

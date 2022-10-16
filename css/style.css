@@ -4,8 +4,8 @@
 
 /** VARIABLES **/
 :root {
-  --darker: #1e1e2f;
-  --dark: #14141f;
+  --darker: #302833;
+  --dark: #3d323f;
   --lighter: #efefef;
   --light: #E7EAF5;
 
@@ -14,11 +14,12 @@
   --text-hover-day: #111827;
 
   --text-night: #ffffff;
-  --border-night: #f3f4f610;
+  --border-night: #6c5971;
   --text-hover-night: #b5ccff;
 
   --radius: .375rem;
 
+  --accent-color-night: #6b5870;
   --accent-color-day: #3D67D4;
 
   --5pxradius: 5px;
@@ -43,8 +44,8 @@
   --background: var(--dark);
   --text-hover: white;
   --border: var(--border-night);
-  --accent-color: var(--accent-color-day);
-  --transparent-navbar: rgba(20, 20, 31, .5);
+  --accent-color: var(--accent-color-night);
+  --transparent-navbar: rgba(61, 50, 63, .5);
   --hover-transparent: rgba(255, 255, 255, 0.041);
 }
 
@@ -55,18 +56,21 @@
   scrollbar-color: var(--overlay) #ffffff;
 }
 
+*::selection {
+  color: var(--border);
+}
+
 /** Chrome, Edge, and Safari **/
 *::-webkit-scrollbar {
   width: 5px;
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--background);
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--overlay);
-  border-radius: 5px;
 }
 
 /** GENERAL SETTINGS **/
@@ -87,6 +91,19 @@
 
 .night .moon {
   display: none;
+}
+
+/** HTML SETTINGS **/
+html {
+  scroll-behavior: smooth;
+}
+
+/** ANCHOR LINK SETTINGS **/
+:target:before {
+  content: "";
+  display: block;
+  height: 250px;
+  margin: -200px 0 0;
 }
 
 /** BODY SETTINGS **/
@@ -116,8 +133,18 @@ i {
 /** image setting **/
 img {
   width: 100%;
+  user-select: none;
   border-radius: var(--5pxradius);
 }
+
+a,
+h1,
+p,
+li {
+  user-select: none;
+}
+
+
 
 /** NAVBAR SETTINGS **/
 nav {
@@ -144,6 +171,7 @@ nav>div:first-child {
   padding: 1.5rem 0;
   margin: 0 auto;
   max-width: 1280px;
+
 }
 
 svg {
@@ -191,8 +219,9 @@ svg {
 
 .nav-navigation {
   margin: 0 1em;
-  padding: 0 .5em;
+  padding: 0 .1em;
   border-radius: var(--5pxradius);
+  background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
 }
 
@@ -203,7 +232,7 @@ svg {
 
 .nav-navigation li:hover {
   cursor: pointer;
-  background-color: var(--border);
+  background-color: var(--dark);
   cursor: pointer;
   border-radius: var(--5pxradius);
 }
@@ -249,7 +278,8 @@ svg {
   background-color: transparent;
 }
 
-.nav-contact a svg {
+.nav-contact a svg,
+.social-media-popup a svg {
   fill: white;
 }
 
@@ -263,8 +293,23 @@ svg {
   transition: all .3s ease;
   background: var(--background);
   border-radius: var(--5pxradius);
-  box-shadow: 0 0 10px #0000002b;
 }
+
+/**
+.dropdown::before {
+  z-index: -1;
+  content: "lol";
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: var(--background);
+  ;
+  background: var(--background);
+}
+**/
 
 /** DROPDOWN HEADER **/
 .dropdown-header {
@@ -276,6 +321,7 @@ svg {
 .dropdown-close {
   padding: .5rem;
   cursor: pointer;
+  transition: all .2s ease;
   border-radius: var(--5pxradius);
 }
 
@@ -290,12 +336,13 @@ svg {
 
 .dropdown-list li {
   padding: .75rem;
-  transition: all .3s ease;
   border-radius: var(--5pxradius);
 }
 
 .dropdown-list li:hover {
   cursor: pointer;
+  transition: all .1s ease;
+  box-shadow: 0 0 0 2px var(--accent-color);
   background-color: var(--hover-transparent);
 }
 
@@ -308,12 +355,36 @@ svg {
 /** DROPDOWN CONTACT **/
 .dropdown-contact {
   padding: .75rem;
-  transition: all .3s ease;
+  transition: all .1s ease;
   border-radius: var(--5pxradius);
+}
+
+/** SOCIAL MEDIA POPUP **/
+.social-media-popup {
+  width: auto;
+  bottom: 0px;
+  left: 1.5rem;
+  position: fixed;
+  border-radius: var(--5pxradius);
+  margin: 1.5rem 0;
+  background-color: var(--background);
+}
+
+.social-media-popup ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media-popup svg,
+.social-media-popup a svg {
+  fill: currentColor;
 }
 
 .dropdown-contact:hover {
   cursor: pointer;
+  box-shadow: 0 0 0 2px var(--accent-color);
   background-color: var(--hover-transparent);
 }
 
@@ -321,7 +392,7 @@ svg {
   gap: 1.5em;
   display: grid;
   justify-items: center;
-  justify-content: space-around;
+  justify-content: center;
   margin: calc(50vh - 50px) 0 calc(50vh) 0;
 }
 
