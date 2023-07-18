@@ -80,7 +80,6 @@
   list-style: none;
   scrollbar-width: thin;
   box-sizing: border-box;
-  /**transition: all .2s ease;**/
   font-family: 'Inter', sans-serif;
 }
 
@@ -154,7 +153,6 @@ nav {
   position: fixed;
   color: var(--text);
   padding: 0 1.5rem;
-  transition: all .2s ease;
   background-color: var(--transparent-navbar);
   backdrop-filter: blur(20px);
 }
@@ -163,7 +161,10 @@ nav div,
 nav ul {
   display: flex;
   align-items: center;
-  transition: all .2s ease;
+}
+
+nav div {
+  transition: all .3s ease;
 }
 
 nav>div:first-child {
@@ -228,13 +229,12 @@ svg {
 .nav-navigation li {
   padding: 0.5em 1rem;
   transition: all .3s;
+  border-radius: var(--5pxradius);
 }
 
 .nav-navigation li:hover {
   cursor: pointer;
   background-color: var(--dark);
-  cursor: pointer;
-  border-radius: var(--5pxradius);
 }
 
 .nav-navigation li:last-child {
@@ -257,7 +257,7 @@ svg {
 }
 
 .nav-theme div:hover {
-  background-color: var(--hover-transparent);
+  background-color: var(--dark);
 }
 
 /** NAVBAR CONTACT SETTINGS **/
@@ -326,6 +326,7 @@ svg {
 }
 
 .dropdown-close:hover {
+  box-shadow: 0 0 0 2px var(--accent-color);
   background-color: var(--hover-transparent);
 }
 
@@ -362,12 +363,24 @@ svg {
 /** SOCIAL MEDIA POPUP **/
 .social-media-popup {
   width: auto;
-  bottom: 0px;
+  bottom: 1rem;
   left: 1.5rem;
   position: fixed;
-  border-radius: var(--5pxradius);
   margin: 1.5rem 0;
+  transition: all .2s ease;
+  border-radius: var(--5pxradius);
   background-color: var(--background);
+}
+
+.social-media-popup div {
+  padding: .25rem;
+  transition: all .3s ease;
+  border-radius: var(--5pxradius);
+}
+
+.social-media-popup div:hover {
+  box-shadow: 0 0 0 2px var(--accent-color);
+  background-color: var(--hover-transparent);
 }
 
 .social-media-popup ul {
@@ -465,6 +478,7 @@ svg {
   }
 
   .dropdown-hamburguer:hover {
+    box-shadow: 0 0 0 2px var(--accent-color);
     background-color: var(--hover-transparent);
   }
 
