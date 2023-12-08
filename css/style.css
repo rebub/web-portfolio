@@ -191,8 +191,6 @@ svg {
   filter: invert(var(--invert));
 }
 
-.navbar-addon {}
-
 .navbar-addon #logo-name {
   opacity: 1;
   cursor: pointer;
