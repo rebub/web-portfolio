@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>sandro's portfolio</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="author" content="Sandro Santos" />
+    <meta name="description" content="sandro's portfolio" />
+    <link rel="stylesheet" id="theme_file" href="/css/light.css" type="text/css">
+    <script defer type="text/javascript" src="/js/theme-switcher.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/images/icon/favicon.png" />
+</head>
+
+<body>
+    <nav>
+        <div class="main_nav">
+            <div class="navbar_img_container">
+                <img id="navbar_img" src="/assets/images/icon/icon.png" alt="sandro's portfolio logo">
+            </div>
+            <div id="desktop_nav">
+                <ul>
+                    <li id="light_theme"><a href="javascript:toggle_theme()"><ion-icon name="sunny"></ion-icon></a></li>
+                    <li id="dark_theme"><a href="javascript:toggle_theme()"><ion-icon name="moon"></ion-icon></a></li>
+                    <li><a class="nav-link" href="/index.html">home</a></li>
+                    <li><a class="nav-link" href="/projects.html">projects</a></li>
+                    <li><a class="nav-link" aria-current="page" href="/blog.html">blog</a></li>
+                    <li><a class="nav-link" href="/contact.html">contact</a></li>
+                </ul>
+            </div>
+            <div id="mobile_nav">
+                <button id="pop_btn" popovertarget="my_popover"><ion-icon name="menu"></ion-icon></button>
+            </div>
+
+            <div popover id="my_popover">
+                <div class="main_nav">
+                    <div>
+                        <img id="popover_img" src="/assets/images/icon/icon.png" alt="sandro's portfolio logo">
+                    </div>
+
+                    <div id="mobile_nav">
+                        <button id="pop_btn_close" popovertarget="my_popover"><ion-icon
+                                name="close"></ion-icon></button>
+                    </div>
+                </div>
+
+                <div>
+                    <ul>
+                        <li><a class="nav-link" href="/index.html"><ion-icon name="home"></ion-icon>home</a>
+                        </li>
+                        <li><a class="nav-link" href="/projects.html"><ion-icon
+                                    name="code-slash"></ion-icon>projects</a></li>
+                        <li aria-current="page"><a class="nav-link" href="/blog.html"><ion-icon
+                                    name="create"></ion-icon>blog</a></li>
+                        <li><a class="nav-link" href="/contact.html"><ion-icon name="people"></ion-icon>contact</a></li>
+                    </ul>
+                </div>
+                <div class="mobile_theme_social">
+                    <ul>
+                        <a id="mobile_light_theme" href="javascript:toggle_theme()"><ion-icon name="sunny"></ion-icon>
+                            <li>light</li>
+                        </a>
+
+                        <a id="mobile_dark_theme" href="javascript:toggle_theme()"><ion-icon name="moon"></ion-icon>
+                            <li>dark</li>
+                        </a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon>
+                            <li>instagram</li>
+                        </a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon>
+                            <li>twitter</li>
+                        </a>
+                        <a href="#"><ion-icon name="logo-github"></ion-icon>
+                            <li>github</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <div class="blog_area">
+            <h2>making this portfolio</h2>
+            <a href="/blog.html">
+                <p><ion-icon name="caret-back-outline"></ion-icon>back</p>
+            </a>
+            <div class="post_preview">
+                <div class="post_commit">
+                    <div class="post_title">
+                        <h3>first commit</h3>
+                        <a
+                            href="https://gitlab.com/thereub/web_portfolio/-/commit/e5dbf39c8c089112d71b53dbeae50a88d3f0d82e">
+                            <button><ion-icon name="git-commit-outline"></ion-icon>
+                                commit
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="post_text">
+                        <p>Building and fine-tuning my personal web portfolio has been a bit of a journey. After
+                            spending
+                            years messing around with it, making tweaks here and there, and doing some complete
+                            do-overs,
+                            I'm stoked to tell you how I finally got to the version you see today.</p>
+                        <p>The initial commit lays down the groundwork with the fundamental files forming the backbone
+                            of
+                            the website. Think of it as setting up the canvas before diving into the details. Rest
+                            assured,
+                            this is just the beginning. Subsequent commits will bring in more updates and refinements,
+                            adding layers of functionality, design enhancements, and additional content. Stay tuned for
+                            the
+                            evolution of this digital space!</p>
+                    </div>
+
+                    <div class="post_author">
+                        <p><ion-icon name="people"></ion-icon><span>sandro</span></p>
+                        <p><ion-icon name="calendar-number"></ion-icon><span>07-12-2023</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>by sandro santos in 2023</p>
+        </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

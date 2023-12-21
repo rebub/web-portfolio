@@ -1,224 +1,262 @@
-<html lang="en">
+<!doctype html>
+<html lang="pt">
 
 <head>
-  <title>sandro's portfolio</title>
-
   <meta charset="UTF-8">
-  <meta name="author" content="Sandro Santos" />
-  <meta name="description" content="sandro's portfolio 🔥" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>sandro's portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/glider.min.css" />
-  <link rel="icon" type="image/png" href="/assets/images/icon/favicon.png" />
-
-  <!-- <script defer type="text/javascript" src="js/sliders.js"></script> -->
-  <!-- <script defer type="text/javascript" src="js/glider.min.js"></script> -->
+  <meta name="author" content="Sandro Santos" />
+  <meta name="description" content="sandro's portfolio" />
+  <link rel="stylesheet" id="theme_file" href="css/light.css" type="text/css">
+  <script defer type="text/javascript" src="js/theme-switcher.js"></script>
   <script defer type="text/javascript" src="js/navbar.js"></script>
-  <script defer type="text/javascript" src="js/theme-toggle.js"></script>
-  <script defer src="https://kit.fontawesome.com/82e80b8641.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+  <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/images/icon/favicon.png" />
 </head>
 
-
-<body class="">
-
+<body>
   <nav>
-    <div>
-      <div class="nav-logo">
-        <img id="logo" src="assets/images/icon/icon.png" alt="sandro's logo">
+    <div class="main_nav">
+      <div class="navbar_img_container">
+        <img id="navbar_img" src="assets/images/icon/icon.png" alt="sandro's portfolio logo">
+      </div>
+      <div id="desktop_nav">
+        <ul>
+          <li id="light_theme"><a href="javascript:toggle_theme()"><ion-icon name="sunny"></ion-icon></a></li>
+          <li id="dark_theme"><a href="javascript:toggle_theme()"><ion-icon name="moon"></ion-icon></a></li>
+          <li><a class="nav-link" aria-current="page" href="/index.html">home</a></li>
+          <li><a class="nav-link" href="/projects.html">projects</a></li>
+          <li><a class="nav-link" href="/blog.html">blog</a></li>
+          <li><a class="nav-link" href="/contact.html">contact</a></li>
+        </ul>
+      </div>
+      <div id="mobile_nav">
+        <button id="pop_btn" popovertarget="my_popover"><ion-icon name="menu"></ion-icon></button>
+      </div>
 
-        <div id="title">
-
-          <div id="logo-name">
-            <h1>sandro</h1>
+      <div popover id="my_popover">
+        <div class="main_nav">
+          <div>
+            <img id="popover_img" src="assets/images/icon/icon.png" alt="sandro's portfolio logo">
           </div>
 
+          <div id="mobile_nav">
+            <button id="pop_btn_close" popovertarget="my_popover"><ion-icon name="close"></ion-icon></button>
+          </div>
         </div>
 
-      </div>
-      <div id="dropdown-hamburguer" class="dropdown-hamburguer">
-        <svg viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd"
-            d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd" />
-        </svg>
-      </div>
-      <ul class="nav-navigation">
-        <li class="nav-margin">About</li>
-        <li class="nav-margin">Projects</li>
-        <li class="nav-margin">Other</li>
-        <div class="nav-theme">
-          <input type="checkbox" id="theme-switch" class="switch" onclick="themeToggle()">
-          <label for="theme-switch">
-            <div>
-              <svg class="moon" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-              </svg>
-
-              <svg class="sun" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                  clip-rule="evenodd" />
-              </svg>
-            </div>
-          </label>
+        <div>
+          <ul>
+            <li aria-current="page"><a class="nav-link" href="/index.html"><ion-icon name="home"></ion-icon>home</a>
+            </li>
+            <li><a class="nav-link" href="/projects.html"><ion-icon name="code-slash"></ion-icon>projects</a></li>
+            <li><a class="nav-link" href="/blog.html"><ion-icon name="create"></ion-icon>blog</a></li>
+            <li><a class="nav-link" href="/contact.html"><ion-icon name="people"></ion-icon>contact</a></li>
+          </ul>
         </div>
-      </ul>
+        <div class="mobile_theme_social">
+          <ul>
+            <a id="mobile_light_theme" href="javascript:toggle_theme()"><ion-icon name="sunny"></ion-icon>
+              <li>light</li>
+            </a>
 
-      <div class="nav-contact">
-
-        <a class="icon" href="mailto:rebub@vivaldi.net">
-          <svg viewBox="0 0 20 20" fill="currentColor">
-            <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
-            <path
-              d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
-          </svg>Contact</a>
+            <a id="mobile_dark_theme" href="javascript:toggle_theme()"><ion-icon name="moon"></ion-icon>
+              <li>dark</li>
+            </a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon>
+              <li>instagram</li>
+            </a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon>
+              <li>twitter</li>
+            </a>
+            <a href="#"><ion-icon name="logo-github"></ion-icon>
+              <li>github</li>
+            </a>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
 
-  <div class="social-media-popup">
-    <ul>
-      <li>
-        <a href="https://github.com/rebub">
-          <div>
-            <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true"
-              class="octicon octicon-mark-github v-align-middle">
-              <path fill-rule="evenodd"
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-              </path>
-            </svg>
+  <div>
+    <div class="home_area">
+      <div class="introduction_area">
+        <h2>sandro</h2>
+        <div class="introduction_preview">
+          <p>I'm sandro santos, a programmer from Portugal.
+            <br> Check out some of my projects.
+          </p>
+
+          <a target="_blank" href="/assets/pdf/curriculo.pdf">
+            <button>
+              <ion-icon name="download"></ion-icon>resume
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="project_id" class="projects_area">
+      <div class="projects">
+        <h2>projects</h2>
+        <div class="project_preview">
+          <div class="project_cta_description">
+            <div>
+              <h3>EcoTrack</h3>
+              <p>Sustainable lifestyle app, tracks and rewards eco-friendly habits.</p>
+            </div>
+            <div class="project_preview_button">
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="information-circle"></ion-icon>details
+                </button>
+              </a>
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="logo-github"></ion-icon>source
+                </button>
+              </a>
+            </div>
           </div>
-        </a>
-      </li>
-      <li>
-        <a href="">
 
-        </a>
-      </li>
-    </ul>
+          <div class="project_cta_description">
+            <div>
+              <h3>HealthHubAI</h3>
+              <p>Personalized health assistant using AI for proactive wellness guidance.</p>
+            </div>
+            <div class="project_preview_button">
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="information-circle"></ion-icon>details
+                </button>
+              </a>
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="logo-github"></ion-icon>source
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="project_cta_description">
+            <div>
+              <h3>CodeCrafters</h3>
+              <p>Online coding platform fostering collaboration for real-world software projects.</p>
+            </div>
+            <div class="project_preview_button">
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="information-circle"></ion-icon>details
+                </button>
+              </a>
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="logo-github"></ion-icon>source
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="project_cta_description">
+            <div>
+              <h3>MindSculpt</h3>
+              <p>Mental wellness app with personalized mindfulness exercises and mood tracking.</p>
+            </div>
+            <div class="project_preview_button">
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="information-circle"></ion-icon>details
+                </button>
+              </a>
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="logo-github"></ion-icon>source
+                </button>
+              </a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="blog_area">
+      <div class="blog_post_area">
+        <h2>blog</h2>
+        <div class="blog_post_preview">
+          <div class="post_title">
+            <h3><ion-icon name="caret-forward"></ion-icon>first ever post</h3>
+            <a href="/blog/portfolio-changelogs.html"><button><ion-icon name="eye"></ion-icon>read more</button></a>
+
+          </div>
+          <div class="post_text">
+            <p>Well making this damn portfolio is annoying i've been making one and it's never done.</p>
+            <p>As of this post the project will be uploaded to Github.</p>
+          </div>
+          <div>
+            <div class="post_tags">
+              <p><ion-icon name="pricetags"></ion-icon>
+                <span>#firstpost</span>
+                <span>#makingportfolio</span>
+            </div>
+            <div class="post_author">
+              <p><ion-icon name="people"></ion-icon><span>sandro</span></p>
+              <p><ion-icon name="calendar-number"></ion-icon><span>07-12-2023</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact_area">
+      <div class="contact">
+        <h2>want to get in touch ?</h2>
+        <div class="contact_preview">
+          <div class="contact_cta">
+            <p>we still do e-mails?<br> right?</p>
+            <div class="contact_preview_button">
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="send"></ion-icon>send
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact_cta">
+            <p>or with those phones.. send me a DM</p>
+            <div class="contact_preview_button">
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="copy"></ion-icon>copy
+                </button>
+              </a>
+              <a target="_blank" href="#">
+                <button>
+                  <ion-icon name="chatbox"></ion-icon>message
+                </button>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="social_media">
+            <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href=""><ion-icon name="logo-github"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>by sandro santos in 2023</p>
+    </footer>
   </div>
-  <div id="dropdown-menu" class="dropdown" style="display: none;">
-    <div class="dropdown-header">
-      <div class="nav-logo">
-        <img src="/assets/images/icon/icon.png" alt="sandro's logo">
-      </div>
-      <div id="dropdown-close" class="dropdown-close">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-          <path fillRule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clipRule="evenodd" />
-        </svg>
-      </div>
-    </div>
-    <div class="dropdown-list">
-      <ul>
-        <li>
-          <a class="icon" href="#">
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-            </svg>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#about">
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M10 2a1 1 0 00-1 1v1a1 1 0 002 0V3a1 1 0 00-1-1zM4 4h3a3 3 0 006 0h3a2 2 0 012 2v9a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm2.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm2.45 4a2.5 2.5 0 10-4.9 0h4.9zM12 9a1 1 0 100 2h3a1 1 0 100-2h-3zm-1 4a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1z"
-                clip-rule="evenodd" />
-            </svg>
-            <span>About</span>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="#">
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
-                clip-rule="evenodd" />
-            </svg>
-            <span>Projects</span>
-          </a>
-        </li>
-        <li>
-          <a class="icon" href="/assets/pdf/curriculo.pdf">
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path
-                d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z" />
-            </svg>
-            <span>Resume</span>
-          </a>
-        </li>
-        <label for="theme-switch">
-          <li>
-            <a class="icon">
-              <svg class="moon" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-              </svg>
-
-              <svg class="sun" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span id="theme-text-mobile"></span>
-            </a>
-          </li>
-        </label>
-      </ul>
-
-      <div class="dropdown-divider"></div>
-
-      <div class="dropdown-contact">
-        <a class="icon" href="mailto:rebub@vivaldi.net">
-          <svg viewBox="0 0 20 20" fill="currentColor">
-            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-          </svg>
-          <span> rebub@vivaldi.net</span>
-        </a>
-      </div>
-
-      <div class="dropdown-socials">
-        <ul>
-          <li>
-            <a class="icon" href="https://github.com/rebub" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span>github.com/rebub</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <section>
-
-    <div class="cta-section">
-      <h1>i create <span>your</span> experiences</h1>
-      <a class="icon" href="#about">
-        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd"
-            d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z"
-            clip-rule="evenodd" />
-        </svg>
-        <p>down</p>
-      </a>
-    </div>
-
-    <div class="hero-section" id="about">
-
-    </div>
-
-  </section>
-
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

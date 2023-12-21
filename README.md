@@ -1,18 +1,24 @@
-# sandro's web portfolio
 
-## 💻 My web portfolio was made with:
+# sandro's portfolio
 
-- JS
-- CSS
-- HTML5
+A brief description of what this project does and who it's for
 
-## 📟 Coded in:
 
-- Visual Studio Code
+## Authors
 
-### A few cool things that it has such as:
+- [@sandro](https://github.com/rebub)
 
-- A proper dark/light mode that is saved.
-- Everything is smoothly animated and responsive.
 
-## ✅ And guess what? It's [Live](http://sandro-santos.com)! 
+## Features
+
+- responsive
+- light/dark mode
+- smoothly animated
+- local storage for light/dark mode
+
+
+
+## Roadmap
+
+- Implement AJAX
+
