@@ -206,6 +206,7 @@ nav div ul {
     padding: 1em;
     margin: 1em 0;
     border-radius: 1em;
+    transition: all .3s ease;
     background: var(--hover_color);
     border: 1px solid var(--secondary_color);
 }
